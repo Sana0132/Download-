@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Video Downloader</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Facebook Video Downloader</h1>
+        <input type="text" id="videoLink" placeholder="Paste Facebook video link here">
+        <select id="formatSelect">
+            <option value="mp3">MP3</option>
+            <option value="mp4">MP4</option>
+        </select>
+        <button id="downloadButton">Download</button>
+    </div>
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+    const videoLink = document.getElementById('videoLink').value;
+    const format = document.getElementById('formatSelect').value;
+
+    if (!videoLink) {
+        alert('Please paste a Facebook video link.');
+        return;
+    }
+
+    // Simulate the download process
+    alert(`Downloading video as ${format.toUpperCase()}...`);
+    // Here you would typically use an API or library to fetch the video data and save it
+});
+    </script>
+</body>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+</html>
